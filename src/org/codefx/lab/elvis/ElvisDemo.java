@@ -38,7 +38,7 @@ public class ElvisDemo {
 		// a slightly less verbose but also less readable way to solve the problem
 		Customer customer = order == null ? null : order.getCustomer();
 		Address address = customer == null ? null : customer.getAddress();
-		return address.getStreetName();
+		return address == null ? null : address.getStreetName();
 	}
 
 	private String getStreetName_Optional(Order order) {
